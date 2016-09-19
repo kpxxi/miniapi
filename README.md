@@ -3,7 +3,7 @@ Mini API setup for a tech challenge using Python and Tornado with SQLITE 3 datab
 
 Prerequisite
 ------------
-- Install tornado using pip or easy_install
+- Install tornado using pip or easy_install <br />
   `<pip install tornado>`
 
 Running the MINIAPI
