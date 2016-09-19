@@ -36,7 +36,7 @@ cURL examples:
 - OUTPUT
   [{"id":1,"name":"agenta"}]
 
-- curl /api/listing/new_listing --data "userid=1&price=2400&listing_type=rent&postal_code=123456&status=active
+- curl /api/listing/new_listing --data "userid=1&price=2400&listing_type=rent&postal_code=123456&status=active"
 - OUTPUT
   {"result": "New Listing Created"}
 
