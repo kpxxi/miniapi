@@ -10,6 +10,7 @@ Running the MINIAPI
 ---------------------
 - Run apiserver.py <python apiserver.py> from command prompt/terminal (service will be run on localhost with port 8888)
 - New db file "api.db" will be created in current working directory with "Listing" and "User" tables
+- Create new user first before creating a listing
 
 Usage
 ------
