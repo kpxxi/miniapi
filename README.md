@@ -14,7 +14,7 @@ Running the MINIAPI
 
 Usage
 ------
-Open a new terminal, below are the available API calls
+Open a new terminal, below are the available API calls__
 Output in JSON format
 
 Url | Function Description | Parameters | Parameters Description
@@ -39,9 +39,11 @@ Url | Function Description | Parameters | Parameters Description
 /api/listing/delete_listing/ | To delete listing of the given listing id | id | Listing ID
 
 cURL examples:
-- `<curl /api/user/get_users>`
-- OUTPUT: `<[{"id":1,"name":"agenta"}]>`
+- `<curl /api/user/get_users>`<br />
+  Example Output <br />
+`<[{"id":1,"name":"agenta"}]>`
 
-- `<curl /api/listing/new_listing --data "userid=1&price=2400&listing_type=rent&postal_code=123456&status=active">`
-- OUTPUT: `<{"result": "New Listing Created"}>`
+- `<curl /api/listing/new_listing --data "userid=1&price=2400&listing_type=rent&postal_code=123456&status=active">`<br />
+  Example output <br />
+`<{"result": "New Listing Created"}>`
 
