@@ -4,7 +4,7 @@ Mini API setup for a tech challenge using Python and Tornado with SQLITE 3 datab
 Prerequisite
 ------------
 - Install tornado using pip or easy_install
-  pip install tornado
+  `<pip install tornado>`
 
 Running the MINIAPI
 ---------------------
@@ -16,27 +16,31 @@ Usage
 Open a new terminal, below are the available API calls
 Output in JSON format
 
-1. /api/user/get_users/ (to list all users)
-2. /api/user/update_user/  (to update user)
-  - Required parameters: id, name
-3. /api/user/new_user/ (to create new user)
-  - Required paramaters: name
-4. /api/user/delete_user/ (to delete user)
-  - Required parameters: id
-5. /api/listing/get_listings/ (to list all listings)
-6. /api/listing/new_listing/ (to create new listing)
-  - Required parameters: userid, price,listing_type('rent' OR 'sale'),postal_code,status('active' or 'closed' or 'deleted')
-7. /api/listing/update_listing/ (to edit listing)
-  - Required parameters: userid,price,listing_type,postal_code,status
-8. /api/listing/delete_listing/ (to delete listing)
-  - Required parameters: id
+Url | Function Description | Parameters | Parameters Description
+--- | -------------------- | ---------- | -----------
+/api/user/get_users/ | To list all users | - | -
+/api/user/update_user/ | To update username of the given user id | id | User ID
+ | | name | Username
+/api/user/new_user/ | To add new user | name | username
+/api/user/delete_user/ | To delete user of the given user id | id | User ID
+/api/listing/get_listings/ | To list all listings | - | -
+/api/listing/update_listing/ | To update details of given listing id | id | Listing ID
+ | | userid | User ID (to be taken from User table)
+ | | listing_type | Type of Listing ('rent' or 'sale')
+ | | price | Price of listing
+ | | postal_code | Postal Code of Listing
+ | | status | Status of Listing ('active' or 'closed' or 'deleted')
+/api/listing/new_listing/ | To add new listing | userid | User ID from User table
+ | | listing_type | Type of Listing ('rent' or 'sale')
+ | | price | Price of listing
+ | | postal_code | Postal code of listing
+ | | status | Status of Listing ('active' or 'closed' or deleted')
+/api/listing/delete_listing/ | To delete listing of the given listing id | id | Listing ID
 
 cURL examples:
-- curl /api/user/get_users
-- OUTPUT
-  [{"id":1,"name":"agenta"}]
+- `<curl /api/user/get_users>`
+- OUTPUT: `<[{"id":1,"name":"agenta"}]>`
 
-- curl /api/listing/new_listing --data "userid=1&price=2400&listing_type=rent&postal_code=123456&status=active"
-- OUTPUT
-  {"result": "New Listing Created"}
+- `<curl /api/listing/new_listing --data "userid=1&price=2400&listing_type=rent&postal_code=123456&status=active">`
+- OUTPUT: `<{"result": "New Listing Created"}>`
 
